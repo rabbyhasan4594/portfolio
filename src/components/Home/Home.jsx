@@ -4,7 +4,7 @@ import Typical from 'react-typical';
 import { FaDownload } from 'react-icons/fa';
 const Home = () => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:gap-24 lg:mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:gap-24 lg:mt-20 text-white">
             <div className='lg:ms-20 m-4'>
                 <div>
                     <h5 className='text-2xl'>Hello I'm</h5>
@@ -26,15 +26,16 @@ const Home = () => {
                         <p className='mt-2 mb-2'>
                         I am passionate about programming. I am strongly committed to be a solid software engineer and develop efficient software systems. I am interested about building excellent software that improves the lives of those around me.
                         </p>
-
-                        <button className="btn btn-active btn-secondary lg:mt-2">Resume <FaDownload className='text-white'/></button>
+                        
+                        <a href="/Resume_of_Rabby.pdf" download={true} target='_blank'
+                         rel='noreferrer' ><button className="btn btn-active btn-secondary lg:mt-2" >Resume <FaDownload className='text-white'/></button></a>
 
                     </div>
 
                 </div>
             </div>
-            <div className='lg:w-[500px] lg:h-[500px] text-end'>
-                <img src={me} alt="" />
+            <div className='lg:w-[500px]  lg:h-[500px] text-end'>
+                <img className='rounded-full' src={me} alt="" />
             </div>
 
         </div>
